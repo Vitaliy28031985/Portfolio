@@ -1,0 +1,16 @@
+.conteiner {
+    margin-right: 40px;
+}
+.img {
+    width: 440px;
+    height: 297px;
+    border-radius: 10px;
+}
+
+.title {
+    margin-top: 18px;
+    font-weight: 400;
+    font-size: 23px;
+    color: #000000;
+    ;
+}
