@@ -14,3 +14,7 @@
     color: #000000;
     ;
 }
+
+.title:hover, .title:focus {
+    color: #457CF7;
+}
