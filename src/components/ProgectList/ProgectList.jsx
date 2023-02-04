@@ -12,21 +12,26 @@ export const ProgectList = () => {
   const handleTogle = () => {
     setTogle(togle => !togle);
 };
-
+const showModal = (id) => {
+const dataId = db.filter(progect => progect.id === id);
+setProgect(dataId);
+handleTogle();
+}
 
     return (
       <div>
-        {togle && <ProgectModal onModal={handleTogle}/>}
+        {togle && <ProgectModal onModal={handleTogle} progect={progect}/>}
         <h2 className={s.title}>Реалізовані Проекти</h2>
         <div className={s.conteiner}>
           
           {db.map(({id, title, link}) => 
           (
            <ProgektListEL
-           onClick={handleTogle}
+           onClick={showModal}
            key={id}
            title={title}
            link={link}
+           id={id}
            /> 
           )
           )}

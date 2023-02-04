@@ -1,10 +1,8 @@
+import { logDOM } from '@testing-library/react';
 import { useEffect} from 'react';
 import s from "./ProgectModal.module.css";
 
 export const ProgectModal = ({onModal, progect}) => {
-
-    // const link = evLink.map(link => link.link);
-    // const title = evLink.map(link => link.title);
  
     useEffect(() => {
      window.addEventListener('keydown', handleKeyDown);
@@ -23,6 +21,7 @@ export const ProgectModal = ({onModal, progect}) => {
      return (
          <div className={s.Overlay} >
          <div className={s.Modal}>
+            <p>{progect[0].title}</p>
              <button className={s.button} onClick={onModal} type="button">Згорнути</button>
              
          </div>
