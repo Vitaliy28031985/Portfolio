@@ -1,20 +1,33 @@
 .conteiner {
     margin-right: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    padding: 0;
+
+}
+
+.conteiner:hover, .conteiner:focus {
+    background-color: #b1adad67;
+    box-shadow: 
+    0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .img {
     width: 440px;
     height: 297px;
-    border-radius: 10px;
+    border-radius: 10px 10px 0 0;
 }
 
 .title {
-    margin-top: 18px;
+    
+    padding: 0;
+    margin: 0;
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-weight: 400;
     font-size: 23px;
     color: #000000;
     ;
-}
-
-.title:hover, .title:focus {
-    color: #457CF7;
 }
