@@ -1,4 +1,4 @@
-import { logDOM } from '@testing-library/react';
+// import { logDOM } from '@testing-library/react';
 import { useEffect} from 'react';
 import s from "./ProgectModal.module.css";
 
