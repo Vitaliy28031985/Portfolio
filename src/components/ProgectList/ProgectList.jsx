@@ -4,7 +4,10 @@ import {ProgektListEL} from "../ProgectListEL/ProgectListEL";
 
 export const ProgectList = () => {
     return (
+      <div>
+        <h2 className={s.title}>Реалізовані Проекти</h2>
         <div className={s.conteiner}>
+          
           {db.map(({id, title, link}) => 
           (
            <ProgektListEL
@@ -14,6 +17,7 @@ export const ProgectList = () => {
            /> 
           )
           )}
+        </div>
         </div>
     )
 }
