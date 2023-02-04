@@ -34,8 +34,8 @@
    
     .list {
     display: flex;
-    margin-left: 20px;
-    margin-right: 20cap;
+    margin-left: 10px;
+    margin-right: 10px;
     list-style: none;  
         }
 .listItem {
