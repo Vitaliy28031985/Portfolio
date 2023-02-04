@@ -1,15 +1,10 @@
-.social__itam {
-    width: 44px;
-    height: 44px;
-    margin-left: 10px;
-    }
-
+/* / */
     /* .social__itam--footer {
     background-image: radial-gradient(#457CF7, #375ABE);
     border-radius:  360px;
     transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
     } */
-
+/* 
     .social__link {
     color: #FFFFFF;
     ;
@@ -34,4 +29,26 @@
     width: 20px;
     height: 20px;
     fill: currentColor;
-    }
+    } */
+
+   
+    .list {
+    display: flex;
+    margin-left: 20px;
+    margin-right: 20cap;
+    list-style: none;  
+        }
+.listItem {
+    margin-right: 5px;
+}
+
+    .link {
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 400;
+        color: #457CF7;
+        }
+
+        .link:hover, .link:focus {
+            color: #0F172A;
+        }
