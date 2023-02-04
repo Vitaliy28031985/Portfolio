@@ -1,8 +1,8 @@
 import s from "./ProgectListEL.module.css";
 
-export const ProgektListEL = ({title, link}) => {
+export const ProgektListEL = ({title, link, onClick}) => {
     return (
-        <div className={s.conteiner}>
+        <div onClick={onClick} className={s.conteiner}>
             <div >
                 <img className={s.img} src={link} alt="Foto"/>
             </div>
