@@ -4,6 +4,7 @@ import s from "./Header.module.css";
 export const Header = () => {
 return (
 <div className={s.conteiner}>
+<p>Архітектор Андрій Гайдучик</p>
     <ul>
         <li className={s.list}>
             <a href="tel:+380968369978" className={s.link}>
