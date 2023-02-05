@@ -14,6 +14,8 @@ export const ProgectList = () => {
   const [password, setPassword] = useState('');
   const [auditPassword, setAuditPassword] = useState(false);
 
+
+
 const hedelLogin = () => {
   setshowLogin(showLogin => !showLogin);
 }
@@ -50,10 +52,11 @@ const submitPassword = (e) => {
 
 } 
 
+
     return (
       <div>
         {togle && <ProgectModal onModal={handleTogle} progect={progect}/>}
-        <button onClick={hedelLogin} className={s.button}>Увійти</button>
+        {!auditPassword && (<button onClick={hedelLogin} className={s.button}>Увійти</button>)}
         <h2 className={s.title}>Реалізовані Проекти</h2>
         <div className={s.conteiner}>
           
@@ -81,7 +84,22 @@ const submitPassword = (e) => {
         </div>
         )}
    {auditPassword && (
-    <div>Hi</div>
+    <div>
+      
+      <form className={s.addForm}>
+      <label>Посилання Аватарку</label>
+        <input/> 
+        <label>Назва проекту</label>
+        <input/>
+        <label>Роль в проекті</label>
+        <input/>
+        <label>Час Виконання</label>
+        <input/>
+        <label>Короткий опис проекту</label>
+        <input/>
+        <button onClick={() => setAuditPassword(false)}>Надіслати дані</button>
+      </form>
+      </div>
    )}
         </div>
     )

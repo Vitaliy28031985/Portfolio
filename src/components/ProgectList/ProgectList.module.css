@@ -48,3 +48,9 @@ justify-content: center;
     font-size: 10px;
     text-align: center;  
 }
+
+.addForm {
+display: flex;
+flex-wrap: wrap;
+
+}
