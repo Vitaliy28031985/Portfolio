@@ -2,7 +2,7 @@
 import { useEffect} from 'react';
 import s from "./ProgectModal.module.css";
 
-export const ProgectModal = ({onModal, progect}) => {
+export const ProgectModal = ({onModal, progect, setTogle}) => {
  
     useEffect(() => {
      window.addEventListener('keydown', handleKeyDown);
@@ -54,7 +54,7 @@ export const ProgectModal = ({onModal, progect}) => {
             ><p>PDF</p></a>
             </div>
             </div>
-             <button className={s.button} onClick={onModal} type="button">Згорнути</button>
+             <button className={s.button} onClick={() => onModal(setTogle)} type="button">Згорнути</button>
              </div>
              
          </div>

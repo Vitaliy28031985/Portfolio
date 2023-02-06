@@ -4,12 +4,15 @@ import s from "./ProgectList.module.css";
 import {db} from "../../db/db";
 import {ProgektListEL} from "../ProgectListEL/ProgectListEL";
 import {ProgectModal} from "../ProgectModal/ProgectModal";
+import {ModalAdd} from "../ModalAdd/ModalAdd";
+import handleTogle from "../../helpers/handleTogle";
 
 const rightPassword = "12xvkhfd#95ertfs";
 
 export const ProgectList = () => {
   const [togle, setTogle] = useState(false);
   const [showLogin, setshowLogin] = useState(false);
+  const [showAdd, setshowAdd] = useState(false);
   const [progect, setProgect] = useState({});
   const [password, setPassword] = useState('');
   const [auditPassword, setAuditPassword] = useState(false);
@@ -20,14 +23,11 @@ const hedelLogin = () => {
   setshowLogin(showLogin => !showLogin);
 }
 
-const handleTogle = () => {
-    setTogle(togle => !togle);
-};
 
 const showModal = (id) => {
 const dataId = db.filter(progect => progect.id === id);
 setProgect(dataId);
-handleTogle();
+handleTogle(setTogle);
 }
 
 const changePassword = (e) => {
@@ -42,11 +42,13 @@ const submitPassword = (e) => {
   if (password === '') {return alert('Введіть будь ласка пароль');}
   if (password === rightPassword) {
     setAuditPassword(true);
-    hedelLogin();
+    // hedelLogin();
+    handleTogle(setshowLogin);
     return alert('Вітаємо Вас Андрію! Ви успішно залогінились!');
   }
   setAuditPassword(false);
-  hedelLogin();
+  // hedelLogin();
+  handleTogle(setshowLogin);
   setPassword('');
   return alert('Ви ввели неправельний пароль');
 
@@ -55,7 +57,7 @@ const submitPassword = (e) => {
 
     return (
       <div>
-        {togle && <ProgectModal onModal={handleTogle} progect={progect}/>}
+        {togle && <ProgectModal onModal={handleTogle} setTogle={setTogle} progect={progect}/>}
         {!auditPassword && (<button onClick={hedelLogin} className={s.button}>Увійти</button>)}
         <h2 className={s.title}>Реалізовані Проекти</h2>
         <div className={s.conteiner}>
@@ -64,6 +66,7 @@ const submitPassword = (e) => {
           (
            <ProgektListEL
            onClick={showModal}
+           setTogle={setTogle}
            key={id}
            title={title}
            link={link}
@@ -86,49 +89,13 @@ const submitPassword = (e) => {
         
         )}
    {auditPassword && (
-    <div className={s.backdrop}>
-    <div className={s.backdropModal}>
+    
+    <button onClick={()=> handleTogle(setshowAdd)} className={s.buttonAdd}>Додати проект</button>
       
-      <form className={s.addForm}>
-
-      <div className={s.formElement}>
-      <input className={s.formInput} name="avatar" type="text"/>
-      <label className={s.formLabel} for="avatar">Посилання на aватарку</label>   
-        </div>
-
-        <div className={s.formElement}>
-        
-        <input className={s.formInput} name="title" type="text"/>
-        <label className={s.formLabel} for="title">Назва проекту</label>
-        </div>
-
-        <div className={s.formElement}>
-        
-        <input className={s.formInput} name="role" type="text"/>
-        <label className={s.formLabel} for="role">Роль в проекті</label>
-        </div>
-
-        <div className={s.formElement}>
-        <input className={s.formInput} name="time"/>
-        <label className={s.formLabel} for="time">Час Виконання</label>
-        </div>
-
-        <div className={s.formElement}>
-        <input className={s.formInput} name="link" type="text"/>
-        <label className={s.formLabel} for="link">Посилання на креслення проекту</label>
-        </div>
-
-          <div className={s.formElement}>
-
-        <textarea className={s.formInputTextarea}/>
-        <label className={s.formLabel}>Короткий опис проекту</label>
-        </div>
-
-        <button onClick={() => setAuditPassword(false)}>Надіслати дані</button>
-      </form>
-      </div>
-      </div>
    )}
+    {showAdd && (
+      <ModalAdd setAuditPassword={setAuditPassword}/> 
+    )}
         </div>
     )
 }
