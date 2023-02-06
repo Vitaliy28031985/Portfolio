@@ -31,6 +31,21 @@
     height: 571px; */
 }
 
+.close {
+    width: 30px;
+    height: 30px;
+    background-image: url(../../images/close.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    background-color: #457CF7;
+}
+
+.close:hover, .close:focus {
+    background-color:  #375ABE;
+    color: white;
+}
+
 .addForm {
 margin-top: 40px;
 margin-right: 40px;

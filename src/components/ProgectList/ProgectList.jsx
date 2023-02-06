@@ -94,7 +94,7 @@ const submitPassword = (e) => {
       
    )}
     {showAdd && (
-      <ModalAdd setAuditPassword={setAuditPassword}/> 
+      <ModalAdd setshowAdd={setshowAdd} setAuditPassword={setAuditPassword}/> 
     )}
         </div>
     )

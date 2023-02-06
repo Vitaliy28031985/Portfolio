@@ -6,17 +6,18 @@ export const Social = ({link, icon}) => {
     <div>
         <ul className={s.list}>
             <li className={s.listItem}><a className={s.link} href="https://www.facebook.com/andrew.gaiduchyk">
-                <p>Instagram</p>
+                <div className={s.linkInstagram}></div>
                 </a>
             </li>
             <li className={s.listItem}><a className={s.link} href="https://www.facebook.com/andrew.gaiduchyk">
-                <p>Telegram</p>
+                <div className={s.linkFacebuk}></div>
                 </a>
             </li>
             <li className={s.listItem}><a className={s.link} href="https://www.facebook.com/andrew.gaiduchyk">
-                <p>Facebook</p>
+                <div className={s.linkTelegram}></div>
                 </a>
             </li>
+
         </ul>
     </div>
     </>

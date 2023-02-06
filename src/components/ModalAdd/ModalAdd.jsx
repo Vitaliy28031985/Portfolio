@@ -1,10 +1,13 @@
 import s from "./ModalAdd.module.css";
-export const ModalAdd = ({setAuditPassword}) => {
+import handleTogle from "../../helpers/handleTogle";
+
+
+export const ModalAdd = ({setAuditPassword, setshowAdd}) => {
 
 return (
     <div className={s.backdrop}>
     <div className={s.backdropModal}>
-      
+      <div onClick={() => handleTogle(setshowAdd)} className={s.close}></div>
       <form className={s.addForm}>
 
       <div className={s.formElement}>

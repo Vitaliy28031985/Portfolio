@@ -9,23 +9,33 @@
 }
 .list {
 list-style: none;
-margin-right: 10px;
+margin-right: 5px;
+margin-top: 5px;
 }
 
-.link {
+/* .link {
 text-decoration: none;
 font-size: 12px;
 font-weight: 400;
 color: #457CF7;
 
-}
-.conteinerItem {
-    display: flex;
-    
-}
-.title {
-    margin-right: 5px;
-}
+} */
+
+.phone {
+    width: 20px;
+    height: 20px;
+    background-image: url(../../images/phone-call-icon.svg);
+ 
+    }
+
+    .email {
+        width: 30px;
+        height: 30px;
+        background-image: url(../../images/mail-icon.svg);
+        background-repeat: no-repeat;
+            
+        }
+
 
 .contactConteiner {
     display: flex;

@@ -35,7 +35,7 @@
     .list {
     display: flex;
     margin-left: 10px;
-    margin-right: 10px;
+    margin-right: 5px;
     list-style: none;  
         }
 .listItem {
@@ -52,3 +52,33 @@
         .link:hover, .link:focus {
             color: #0F172A;
         }
+        .linkInstagram {
+            width: 30px;
+            height: 30px;
+            background-image: url(../../images/ig-instagram-icon.svg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+    
+        }
+
+        .linkFacebuk {
+            width: 30px;
+            height: 30px;
+            background-image: url(../../images/facebook-app-icon.svg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+    
+        }
+
+
+        .linkTelegram {
+            width: 30px;
+            height: 30px;
+            background-image: url(../../images/telegram-icon.svg);
+            background-repeat: no-repeat;
+            background-position: 50% 50%;
+    
+        }
+
+
+        
