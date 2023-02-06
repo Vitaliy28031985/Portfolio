@@ -24,17 +24,30 @@ color: #457CF7;
 
 .list {
 list-style: none;
-margin-right: 5px;
+margin-right: 10px;
 margin-top: 5px;
 }
 
-/* .link {
+.link {
 text-decoration: none;
 font-size: 12px;
 font-weight: 400;
 color: #457CF7;
 
-} */
+}
+
+.conteinerItem {
+    display: flex;
+}
+
+@media screen and (max-width: 899px) {
+    .conteinerItem {
+       display: none;
+    }}
+
+.titleLink {
+    margin-right: 5px;
+}
 
 .phone {
     width: 20px;
@@ -43,6 +56,12 @@ color: #457CF7;
  
     }
 
+    @media screen and (min-width: 900px) {
+        .phone {
+            display: none;
+        }
+      }
+
     .email {
         width: 30px;
         height: 30px;
@@ -50,6 +69,12 @@ color: #457CF7;
         background-repeat: no-repeat;
             
         }
+
+        @media screen and (min-width: 900px) {
+            .email {
+                display: none;
+            }
+          }
 
 
 .contactConteiner {

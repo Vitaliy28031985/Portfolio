@@ -12,7 +12,7 @@ justify-content: center;
 .button {
     position: absolute;
     right: 130px;
-    top: 20px;
+    top: 30px;
     border: 0;
     border-radius: 5px;
     padding: 7px;
@@ -20,6 +20,12 @@ justify-content: center;
     color: white;
     font-size: 10px;
     text-align: center;
+  }
+
+  @media screen and (max-width: 1080px) {
+    .button {
+       display: none;
+    }
   }
 
   .button:hover, .button:focus {
