@@ -1,11 +1,12 @@
 import { useState } from 'react';
 
 import s from "./ProgectList.module.css";
-import {db} from "../../db/db";
+// import {db} from "../../db/db";
 import {ProgektListEL} from "../ProgectListEL/ProgectListEL";
 import {ProgectModal} from "../ProgectModal/ProgectModal";
 import {ModalAdd} from "../ModalAdd/ModalAdd";
 import handleTogle from "../../helpers/handleTogle";
+import {useGetProgectsQuery} from "../../redux/progectsSlice";
 
 const rightPassword = "12xvkhfd#95ertfs";
 
@@ -16,7 +17,9 @@ export const ProgectList = () => {
   const [progect, setProgect] = useState({});
   const [password, setPassword] = useState('');
   const [auditPassword, setAuditPassword] = useState(false);
+const {data: progects} = useGetProgectsQuery();
 
+// console.log(progects);
 
 
 const hedelLogin = () => {
@@ -25,7 +28,7 @@ const hedelLogin = () => {
 
 
 const showModal = (id) => {
-const dataId = db.filter(progect => progect.id === id);
+const dataId = progects?.filter(progect => progect.id === id);
 setProgect(dataId);
 handleTogle(setTogle);
 }
@@ -62,14 +65,14 @@ const submitPassword = (e) => {
         <h2 className={s.title}>Реалізовані Проекти</h2>
         <div className={s.conteiner}>
           
-          {db.map(({id, title, link}) => 
+          {progects?.map(({id, title, avatar}) => 
           (
            <ProgektListEL
            onClick={showModal}
            setTogle={setTogle}
            key={id}
            title={title}
-           link={link}
+           link={avatar}
            id={id}
            /> 
           )

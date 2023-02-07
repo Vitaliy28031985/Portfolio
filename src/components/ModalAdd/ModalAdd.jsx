@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 import s from "./ModalAdd.module.css";
 import handleTogle from "../../helpers/handleTogle";
+import {useAddProgectMutation} from "../../redux/progectsSlice";
 
 
 export const ModalAdd = ({setAuditPassword, setshowAdd}) => {
@@ -13,7 +14,7 @@ export const ModalAdd = ({setAuditPassword, setshowAdd}) => {
   const [link, setLink] = useState('');
   const [about, setAbout] = useState('');
 
-
+const [addProgect] = useAddProgectMutation();
 
   const handleChange = e => {
     const {name, value,} = e.currentTarget;
@@ -51,7 +52,14 @@ export const ModalAdd = ({setAuditPassword, setshowAdd}) => {
 
       const handleBackdropSubmit = e => {
         e.preventDefault();
-        console.dir({avatar, title, role, time, link, about})
+        addProgect({avatar, title, role, time, link, about});
+        setAvatar('');
+        setTitle('');
+        setRole('');
+        setTime('');
+        setLink('');
+        setAbout('');
+        handleTogle(setshowAdd);
       }
    
 
