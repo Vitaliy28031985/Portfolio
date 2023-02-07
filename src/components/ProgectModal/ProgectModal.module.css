@@ -57,22 +57,22 @@
 
 .discriptionEl {
     display: flex;
-   font-size: 14px;
+   font-size: 16px;
 }
 
 @media screen and (max-width: 700px) {
   .discriptionEl {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
 .discriptionElAbout {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 @media screen and (max-width: 700px) {
   .discriptionElAbout {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
