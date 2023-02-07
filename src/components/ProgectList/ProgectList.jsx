@@ -1,7 +1,6 @@
 import { useState } from 'react';
 
 import s from "./ProgectList.module.css";
-// import {db} from "../../db/db";
 import {ProgektListEL} from "../ProgectListEL/ProgectListEL";
 import {ProgectModal} from "../ProgectModal/ProgectModal";
 import {ModalAdd} from "../ModalAdd/ModalAdd";
@@ -18,8 +17,6 @@ export const ProgectList = () => {
   const [password, setPassword] = useState('');
   const [auditPassword, setAuditPassword] = useState(false);
 const {data: progects} = useGetProgectsQuery();
-
-// console.log(progects);
 
 
 const hedelLogin = () => {
@@ -45,12 +42,10 @@ const submitPassword = (e) => {
   if (password === '') {return alert('Введіть будь ласка пароль');}
   if (password === rightPassword) {
     setAuditPassword(true);
-    // hedelLogin();
     handleTogle(setshowLogin);
     return alert('Вітаємо Вас Андрію! Ви успішно залогінились!');
   }
   setAuditPassword(false);
-  // hedelLogin();
   handleTogle(setshowLogin);
   setPassword('');
   return alert('Ви ввели неправельний пароль');
@@ -61,7 +56,8 @@ const submitPassword = (e) => {
     return (
       <div>
         {togle && <ProgectModal onModal={handleTogle} setTogle={setTogle} progect={progect}/>}
-        {!auditPassword && (<button onClick={hedelLogin} className={s.button}>Увійти</button>)}
+        {auditPassword ? (<button onClick={() => setAuditPassword(false)} className={s.button}>Вийти</button>) 
+        : (<button onClick={hedelLogin} className={s.button}>Увійти</button>)}
         <h2 className={s.title}>Реалізовані Проекти</h2>
         <div className={s.conteiner}>
           
@@ -93,7 +89,6 @@ const submitPassword = (e) => {
         
         )}
    {auditPassword && (
-    
     <button onClick={()=> handleTogle(setshowAdd)} className={s.buttonAdd}>Додати проект</button>
       
    )}
