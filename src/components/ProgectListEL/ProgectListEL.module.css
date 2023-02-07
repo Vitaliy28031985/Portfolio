@@ -44,3 +44,14 @@
     color: #000000;
     ;
 }
+.buttonDelete {
+    width: 30px;
+    height: 30px;
+    margin-top: 3px;
+    margin-left: 390px;
+    background-image: url(../../images/Vector.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border-radius: 50%;
+    background-color: #fff;  
+}

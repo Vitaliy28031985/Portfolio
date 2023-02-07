@@ -11,7 +11,7 @@ export const ProgektListEL = ({title, link, onClick, id, auditPassword}) => {
             <div >
                 <img className={s.img} src={link} alt="Foto"/>
                 {auditPassword && (
-                   <div onClick={() => onDeleteProgect(id)}>Bидалити</div>  
+                   <div className={s.buttonDelete} onClick={() => onDeleteProgect(id)}></div>  
                 )}
             </div>
             <div>
