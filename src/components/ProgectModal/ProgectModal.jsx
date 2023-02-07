@@ -54,7 +54,7 @@ export const ProgectModal = ({onModal, progect, setTogle}) => {
             ><p>PDF</p></a>
             </div>
             </div>
-             <button className={s.button} onClick={() => onModal(setTogle)} type="button">Згорнути</button>
+             <div className={s.button} onClick={() => onModal(setTogle)} ></div>
              </div>
              
          </div>
