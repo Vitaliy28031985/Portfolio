@@ -1,8 +1,7 @@
-// import { logDOM } from '@testing-library/react';
 import { useEffect} from 'react';
 import s from "./ProgectModal.module.css";
 
-export const ProgectModal = ({onModal, progect, setTogle}) => {
+export const ProgectModal = ({onModal, progect, setTogle, }) => {
  
     useEffect(() => {
      window.addEventListener('keydown', handleKeyDown);
@@ -25,6 +24,8 @@ export const ProgectModal = ({onModal, progect, setTogle}) => {
             <div className={s.dataConteiner} >
             <div >
                 <img className={s.img} src={progect[0].avatar} alt={progect[0].title}/>
+                
+               
             </div>
             <div className={s.discriptionConteiner}>
             <div className={s.discriptionEl}>
@@ -42,7 +43,7 @@ export const ProgectModal = ({onModal, progect, setTogle}) => {
             <p className={s.discriptionElTitle}>Короткий опис проекту:</p>
             <p>{progect[0].about}</p></div>
             
-            <a href={progect[0].link} target="_blank"><p>PDF</p></a>
+            <a href={progect[0].link} ><p>PDF</p></a>
             </div>
             </div>
              <div className={s.button} onClick={() => onModal(setTogle)} ></div>
@@ -53,4 +54,5 @@ export const ProgectModal = ({onModal, progect, setTogle}) => {
          
      )
  };
- 
+
+ //target="_blank"

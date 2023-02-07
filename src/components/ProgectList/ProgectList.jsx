@@ -70,6 +70,7 @@ const submitPassword = (e) => {
            <ProgektListEL
            onClick={showModal}
            setTogle={setTogle}
+           auditPassword={auditPassword}
            key={id}
            title={title}
            link={avatar}
