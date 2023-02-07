@@ -5,7 +5,6 @@
     left: 0px;
     width: 100%;
     height: 100%;
-    /* z-index: 7; */
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -22,18 +21,14 @@
     border-radius: 10px;
     transform: translate(-50%, -50%);
     z-index: 6;
-    /* @media screen and (min-width: 0px) and (max-width: 1199px) {
-    width: 450px;
-    height: 609px;   
-    }    
-    @media screen and (min-width: 1200px) {
-    width: 528px;
-    height: 571px; */
+
 }
 
 .close {
     width: 30px;
     height: 30px;
+    margin-top: 10px;
+    margin-left: 740px;
     background-image: url(../../images/close.svg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -57,6 +52,7 @@ margin-right: 40px;
 }
 
 .formInput {
+    width: 700px;
     height: 40px;
     padding: 12px;
     border: 1px solid rgba(33, 33, 33, 0.2);
@@ -64,11 +60,6 @@ margin-right: 40px;
     border-radius: 4px;
     padding-left: 10px;
     transition: border 250ms  cubic-bezier(0.4, 0, 0.2, 1);
-    /* @media screen and (min-width: 0px) and (max-width: 1199px) {
-    width: 370px;  
-    }   
-    @media screen and (min-width: 1200px) {
-    width: 448px; */
     }
 
 .formInput:hover, .formInput:focus {
@@ -87,6 +78,7 @@ margin-right: 40px;
             }
 
             .formInputTextarea {
+                width: 500px;
                 height: 120px;
                 resize: none;
                 padding: 12px;
@@ -94,12 +86,20 @@ margin-right: 40px;
                 box-sizing: border-box;
                 border-radius: 4px;
                 transition: border 250ms  cubic-bezier(0.4, 0, 0.2, 1); 
-                /* @media screen and (min-width: 0px) and (max-width: 1199px) {
-                width: 370px;    
-                }  
-                @media screen and (min-width: 1200px) {
-                width: 448x; */
                 }
 .formInputTextarea:hover, .formInputTextarea:focus {
 outline: none;
-border: 1px solid #457CF7;}       
+border: 1px solid #457CF7;
+} 
+
+.buttonSubmit {
+    margin-left: 300px;
+    margin-bottom: 10px;
+    border: 0;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: #457CF7;
+    color: white;
+    font-size: 20px;
+    text-align: center;    
+}      

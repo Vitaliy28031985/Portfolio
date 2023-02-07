@@ -43,7 +43,7 @@ return (
         <label className={s.formLabel}>Короткий опис проекту</label>
         </div>
 
-        <button onClick={() => setAuditPassword(false)}>Надіслати дані</button>
+        <button className={s.buttonSubmit} onClick={() => setAuditPassword(false)}>Надіслати дані</button>
       </form>
       </div>
       </div>
