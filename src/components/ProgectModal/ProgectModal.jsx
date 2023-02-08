@@ -12,9 +12,15 @@ export const ProgectModal = ({onModal, progect, setTogle, }) => {
  
      const handleKeyDown = e => {
          if (e.code === 'Escape') {
-             onModal();
+             onModal(setTogle);
              }
           };
+    
+          const handleBackdropClick = e => {
+            if (e.currentTarget === e.target) {
+                onModal(setTogle);
+             }
+             };
            
  
      return (
@@ -46,7 +52,7 @@ export const ProgectModal = ({onModal, progect, setTogle, }) => {
             <a href={progect[0].link} ><p>PDF</p></a>
             </div>
             </div>
-             <div className={s.button} onClick={() => onModal(setTogle)} ></div>
+             <div className={s.button} onClick={handleBackdropClick} ></div>
              </div>
              
          </div>
