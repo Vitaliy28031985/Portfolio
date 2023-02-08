@@ -49,7 +49,7 @@ export const ProgectModal = ({onModal, progect, setTogle, }) => {
             <p className={s.discriptionElTitle}>Короткий опис проекту:</p>
             <p>{progect[0].about}</p></div>
             
-            <a href={progect[0].link} ><p>PDF</p></a>
+            <a className={s.link} href={progect[0].link}><p>Подивитись креслення у форматі PDF</p></a>
             </div>
             </div>
              <div className={s.button} onClick={handleBackdropClick} ></div>

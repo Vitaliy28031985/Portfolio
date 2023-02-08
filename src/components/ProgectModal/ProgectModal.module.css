@@ -58,7 +58,13 @@
   }
 }
 
-
+.link {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+  color: #457CF7;
+  
+  }
 
 .discriptionEl {
     display: flex;

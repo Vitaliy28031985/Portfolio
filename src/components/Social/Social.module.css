@@ -53,6 +53,7 @@
             color: #0F172A;
         }
         .linkInstagram {
+            
             width: 30px;
             height: 30px;
             background-image: url(../../images/ig-instagram-icon.svg);
@@ -79,6 +80,8 @@
             background-position: 50% 50%;
     
         }
+
+     
 
 
         
