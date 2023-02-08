@@ -58,12 +58,14 @@
 }
 
 .discriptionConteiner {
+  width: 50%;
     margin-left: 20px;
      
 }
 
 @media screen and (max-width: 700px) {
   .discriptionConteiner {
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
