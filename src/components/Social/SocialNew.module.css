@@ -1,0 +1,55 @@
+  
+    .list {
+        display: flex;
+        margin-left: 10px;
+        margin-right: 5px;
+        list-style: none;  
+            }
+    .listItem {
+        margin-right: 5px;
+    }
+
+.instagram {
+    width: 30px;
+    height: 30px;
+    background-color: #457CF7;
+    border-radius: 5px;
+    background-image: url(../../images/instagram.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition: background-color 250ms  cubic-bezier(0.4, 0, 0.2, 1), 
+}
+
+.instagram:hover, .instagram:focus {
+    background-color: #375ABE;
+}
+
+.facebook {
+    width: 30px;
+    height: 30px;
+    background-color: #457CF7;
+    border-radius: 5px;
+    background-image: url(../../images/facebook.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition: background-color 250ms  cubic-bezier(0.4, 0, 0.2, 1), 
+}
+
+.facebook:hover, .facebook:focus {
+    background-color: #375ABE;
+}
+
+.telegram {
+    width: 30px;
+    height: 30px;
+    background-color: #457CF7;
+    border-radius: 5px;
+    background-image: url(../../images/telegram.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    transition: background-color 250ms  cubic-bezier(0.4, 0, 0.2, 1), 
+}
+
+.telegram:hover, .telegram:focus {
+    background-color: #375ABE;
+}

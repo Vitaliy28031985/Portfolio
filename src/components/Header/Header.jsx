@@ -1,11 +1,11 @@
-import {Social} from "../Social/Social";
+import {SocialNew} from "../Social/SocialHew";
 import s from "./Header.module.css";
 
 export const Header = () => {
 return (
 <div className={s.conteiner}>
 <p className={s.title}>Архітектор Андрій Гайдучик</p>
-<Social/>
+<SocialNew/>
     <ul className={s.contactConteiner}>
         <li className={s.list}>
             <a href="tel:+380968369978" className={s.link}>
