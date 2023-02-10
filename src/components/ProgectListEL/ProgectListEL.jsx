@@ -6,6 +6,7 @@ export const ProgektListEL = ({title, link, onClick, id, auditPassword}) => {
     const [deleteProgect] = useDeleteProgectMutation();
     const onDeleteProgect = id => deleteProgect(id);
 
+
     return (
         <div onClick={() => onClick(id)} className={s.conteiner}>
             <div >

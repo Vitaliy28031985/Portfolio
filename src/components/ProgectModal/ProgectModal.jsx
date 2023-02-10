@@ -22,7 +22,7 @@ export const ProgectModal = ({onModal, progect, setTogle, }) => {
              }
              };
            
- 
+ const blank = "_blank";
      return (
          <div className={s.Overlay} >
          <div className={s.Modal}>
@@ -49,7 +49,7 @@ export const ProgectModal = ({onModal, progect, setTogle, }) => {
             <p className={s.discriptionElTitle}>Короткий опис проекту:</p>
             <p>{progect[0].about}</p></div>
             
-            <a className={s.link} href={progect[0].link}><p>Подивитись креслення у форматі PDF</p></a>
+            <a className={s.link} href={progect[0].link} target={blank}><p>Подивитись креслення у форматі PDF</p></a>
             </div>
             </div>
              <div className={s.button} onClick={handleBackdropClick} ></div>
