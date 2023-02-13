@@ -8,7 +8,7 @@ return (
         <p>Андрій Гайдучик</p>
         </div>
         <div>
-            <img width="600" 
+            <img className={s.img} 
             src="https://api.man.gov.ua/api/assets/man/51e58a6f-6bae-436a-8fb0-688e726c5cef/" alt="Hero"></img>
         </div>
     </div>
