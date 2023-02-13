@@ -22,6 +22,11 @@
 
 }
 
+@media screen and (max-width: 800px) {
+    .text {
+      position: absolute;
+    }
+  }
 
 
 @keyframes opacity {
