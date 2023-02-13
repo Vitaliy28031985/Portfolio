@@ -1,0 +1,14 @@
+.hero {
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+    /* font-family: 'Manrope'; */
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #0F172A;
+    text-shadow: 2px 2px 20px #457CF7, 5px 5px 5px #375ABE;
+}
