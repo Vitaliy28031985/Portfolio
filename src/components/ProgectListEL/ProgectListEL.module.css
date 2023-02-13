@@ -18,6 +18,8 @@
     0px 1px 3px rgba(0, 0, 0, 0.12), 
     0px 1px 1px rgba(0, 0, 0, 0.14), 
     0px 2px 1px rgba(0, 0, 0, 0.2);
+    animation-name: opacity;
+    animation-duration: 2000ms;
 }
 .img {
     width: 440px;
@@ -55,3 +57,17 @@
     border-radius: 50%;
     background-color: #fff;  
 }
+
+@keyframes opacity {
+    0% {
+      opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+} 
